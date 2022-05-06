@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ajax</title>
+</head>
+<body>
+<script src="../static/jquery.js"></script>
+<script type="text/javascript">
+	$.ajax({
+		'url':'http://127.0.0.1:5000/showdata',
+		'type': 'GET',
+          'dataType': 'jsonp',
+          'cors': true ,
+          'contentType':'application/json',
+          'secure': true,
+          'headers': {
+            'Access-Control-Allow-Origin': '*',
+          }}).done(function(response){
+		console.log(response);
+	});
+	console.log('hi')
+</script>
+</body>
+</html>
